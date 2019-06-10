@@ -37,7 +37,7 @@ CREATE TABLE movimientos (
 CREATE TABLE inversiones (
   id int(10) PRIMARY KEY AUTO_INCREMENT,
   concepto varchar(100) NOT NULL,
-  fechaInicio date NOT NULL,
+  fecha date NOT NULL,
   valor int NOT NULL,
   tipo varchar(50) NOT NULL,
   usuario varchar(250) NOT NULL,

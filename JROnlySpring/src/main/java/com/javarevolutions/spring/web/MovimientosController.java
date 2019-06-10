@@ -89,7 +89,7 @@ public class MovimientosController extends ControllerUtil {
     }
 
     @RequestMapping("/catalogos/movimientos/borraMovimiento.jr")
-    public String borraCliente(@ModelAttribute("movimientosBean") MovimientosBean movimientosBean, HttpServletRequest request) {
+    public String borraMovimiento(@ModelAttribute("movimientosBean") MovimientosBean movimientosBean, HttpServletRequest request) {
         try {
             service.borraMovimiento(movimientosBean);
             request.setAttribute("pathURL", "/catalogos/movimientos/consultaMovimientos.jr");

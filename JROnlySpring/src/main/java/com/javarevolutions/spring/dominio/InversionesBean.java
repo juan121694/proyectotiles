@@ -14,7 +14,7 @@ public class InversionesBean extends GenericoBean{
     private static final long serialVersionUID = -1833702209651210286L;
     private Integer id;
     private String concepto;
-    private Date fechaInicio;
+    private Date fecha;
     private Integer valor;
     private String fechaStr;
     private String tipo;
@@ -36,12 +36,12 @@ public class InversionesBean extends GenericoBean{
         this.concepto = concepto;
     }
 
-    public Date getFechaInicio() {
-        return fechaInicio;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public Integer getValor() {

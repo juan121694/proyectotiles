@@ -7,7 +7,7 @@ public class Inversiones implements Serializable{
     private static final long serialVersionUID = 2286378858501851031L;
     private Integer id;
     private String concepto;
-    private Date fechaInicio;
+    private Date fecha;
     private String tipo;
     private Integer valor;
     private Index usuario;
@@ -28,12 +28,12 @@ public class Inversiones implements Serializable{
         this.concepto = concepto;
     }
 
-    public Date getFechaInicio() {
-        return fechaInicio;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public String getTipo() {

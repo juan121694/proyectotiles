@@ -17,8 +17,8 @@ public class InversionesDAOImpl extends PersistenceDAO implements InversionesDAO
     public boolean agregar(Object obj) throws Exception {
         Inversiones entity = (Inversiones)obj;
         StringBuilder sb = new StringBuilder();
-        sb.append("insert into "+getEsquema()+".inversiones(concepto, fechaInicio,valor,tipo, usuario) values(?,?,?,?,?)");
-        Object[] args = {entity.getConcepto(), entity.getFechaInicio(), entity.getValor(), entity.getTipo(), entity.getUsuario().getUsuario()};
+        sb.append("insert into "+getEsquema()+".inversiones(concepto, fecha,valor,tipo, usuario) values(?,?,?,?,?)");
+        Object[] args = {entity.getConcepto(), entity.getFecha(), entity.getValor(), entity.getTipo(), entity.getUsuario().getUsuario()};
         return getJdbcTemplate().update(sb.toString(), args) == 0 ? true : false;
     }
     @Override
@@ -35,8 +35,8 @@ public class InversionesDAOImpl extends PersistenceDAO implements InversionesDAO
     public boolean actualizar(Object obj) throws Exception {
         Inversiones entity = (Inversiones)obj;
         StringBuilder sb = new StringBuilder();
-        sb.append("update "+getEsquema()+".inversiones set concepto = ?, valor = ?, fechaInicio = ?, tipo = ?, usuario = ? where id = ?");
-        Object[] args = {entity.getConcepto(), entity.getValor(), entity.getFechaInicio(), entity.getTipo(), entity.getUsuario().getUsuario(), entity.getId()};
+        sb.append("update "+getEsquema()+".inversiones set concepto = ?, valor = ?, fecha = ?, tipo = ?, usuario = ? where id = ?");
+        Object[] args = {entity.getConcepto(), entity.getValor(), entity.getFecha(), entity.getTipo(), entity.getUsuario().getUsuario(), entity.getId()};
         return getJdbcTemplate().update(sb.toString(), args) == 0 ? true : false;
     }
     @Override
@@ -51,7 +51,7 @@ public class InversionesDAOImpl extends PersistenceDAO implements InversionesDAO
                 entity.setId((Integer)mapa.get("id"));
                 entity.setConcepto(""+mapa.get("concepto"));
                 entity.setValor((Integer)mapa.get("valor"));
-                entity.setFechaInicio((Date)mapa.get("fechaInicio"));
+                entity.setFecha((Date)mapa.get("fecha"));
                 entity.setTipo(""+mapa.get("tipo"));
                 Index usuario = new Index();
                 usuario.setUsuario(""+mapa.get("usuario"));
@@ -72,7 +72,7 @@ public class InversionesDAOImpl extends PersistenceDAO implements InversionesDAO
                 Map<String, Object> mapa = rows.get(i);
                 obj.setConcepto(""+mapa.get("concepto"));
                 obj.setValor((Integer)mapa.get("valor"));
-                obj.setFechaInicio((Date)mapa.get("fechaInicio"));
+                obj.setFecha((Date)mapa.get("fecha"));
                 obj.setTipo(""+mapa.get("tipo"));
                 Index usuario = new Index();
                 usuario.setUsuario(""+mapa.get("usuario"));

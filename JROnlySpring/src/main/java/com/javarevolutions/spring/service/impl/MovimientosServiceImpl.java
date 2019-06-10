@@ -5,12 +5,9 @@
  */
 package com.javarevolutions.spring.service.impl;
 
-import com.javarevolutions.spring.service.iface.MovimientosService;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.javarevolutions.spring.dao.iface.MovimientosDAO;
 import com.javarevolutions.spring.dominio.MovimientosBean;
 import com.javarevolutions.spring.entity.Movimientos;

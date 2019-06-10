@@ -1,20 +1,3 @@
-/**
- * Todos los Derechos Reservados © 2014 Java Revolutions.
- * Sistema Web construido solo con Spring.
- * Este software contiene información propiedad exclusiva de Java Revolutions considerada
- * Confidencial. Queda totalmente prohibido su uso o divulgación en forma
- * parcial o total.
- *	---------------------------------------------------------------------------
- * Nombre de Aplicacion: Proyecto Web Java Revolutions Solo Spring
- * Nombre de archivo: IndexController.java
- * Fecha de creacion : Noviembre, 2013
- * @author : Sergio Alberto Cortés Rios
- * @version 1.0
- *
- * Bitácora de modificaciones:
- * CR/Defecto 		Fecha 			Autor 			Descripción del cambio
- *---------------------------------------------------------------------------
- */
 package com.javarevolutions.spring.web;
 
 import java.util.ArrayList;
@@ -59,7 +42,7 @@ public class IndexController {
             bean.setStatus(service.validaLogin(bean));
         } catch(Exception e) {
             bean.setStatus(false);
-            bean.setMensaje("ERROR en la invocación al servicio: "+e);
+            bean.setMensaje("ERROR en la invocaciï¿½n al servicio: "+e);
             log.error(bean.getMensaje());
         }
         if(bean.getStatus()) {
@@ -81,7 +64,7 @@ public class IndexController {
             listaUsuarios.addAll(service.consultaUsuarios());
             return "catalogoUsuarios";
         } catch(Exception e) {
-            String error = "ERROR EN LA INVOCACIÓN AL SERVICIO: "+e;
+            String error = "ERROR EN LA INVOCACIï¿½N AL SERVICIO: "+e;
             request.setAttribute("error", error);
             log.error(error);
             return "error";
@@ -94,7 +77,7 @@ public class IndexController {
             try {
                 usuariosBean = service.getUsuarioPorId(usuariosBean);
             } catch(Exception e) {
-                String error = "ERROR EN LA INVOCACIÓN AL SERVICIO: "+e;
+                String error = "ERROR EN LA INVOCACIï¿½N AL SERVICIO: "+e;
                 request.setAttribute("error", error);
                 log.error(error);
                 return "error";
@@ -119,7 +102,7 @@ public class IndexController {
         try {
             service.insertaUsuario(usuariosBean);
         } catch(Exception e) {
-            String error = "ERROR EN LA INVOCACIÓN AL SERVICIO: "+e+" - "+usuariosBean.getMensaje();
+            String error = "ERROR EN LA INVOCACIï¿½N AL SERVICIO: "+e+" - "+usuariosBean.getMensaje();
             usuariosBean.setMensaje(error);
             request.setAttribute("error", error);
             log.error(error);
@@ -135,7 +118,7 @@ public class IndexController {
             request.setAttribute("pathURL", "/catalogos/usuarios/consultaUsuarios.jr");
             return "redirectScreen";
         } catch(Exception e) {
-            String error = "ERROR EN LA INVOCACIÓN AL SERVICIO: "+e+" - "+usuariosBean.getMensaje();
+            String error = "ERROR EN LA INVOCACIï¿½N AL SERVICIO: "+e+" - "+usuariosBean.getMensaje();
             usuariosBean.setMensaje(error);
             request.setAttribute("error", error);
             log.error(error);
@@ -150,7 +133,7 @@ public class IndexController {
             request.setAttribute("pathURL", "/catalogos/usuarios/consultaUsuarios.jr");
             return "success";
         } catch(Exception e) {
-            String error = "ERROR EN LA INVOCACIÓN AL SERVICIO: "+e+" - "+usuariosBean.getMensaje();
+            String error = "ERROR EN LA INVOCACIï¿½N AL SERVICIO: "+e+" - "+usuariosBean.getMensaje();
             usuariosBean.setMensaje(error);
             request.setAttribute("error", error);
             log.error(error);

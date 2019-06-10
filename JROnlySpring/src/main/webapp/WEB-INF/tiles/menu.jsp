@@ -18,6 +18,14 @@ YAHOO.util.Event.onDOMReady(function () {
 	    	window.location.replace("<%= context %>/catalogos/clientes/consultaClientes.jr");
 	    	return;
 	    }
+            if(opcion == "movimientos") {
+	    	window.location.replace("<%= context %>/catalogos/movimientos/consultaMovimientos.jr");
+	    	return;
+	    }
+            if(opcion == "inversiones") {
+	    	window.location.replace("<%= context %>/catalogos/inversiones/consultaInversiones.jr");
+	    	return;
+	    }
             if(opcion == "pago") {
 	    	window.location.replace("<%= context %>/catalogos/clientes/consultaPago.jr");
 	    	return;
@@ -38,6 +46,12 @@ YAHOO.util.Event.onDOMReady(function () {
 	},
 	{
             text: "Clientes", onclick: {fn: clickSubmenu}, id: "clientes"
+        },
+        {
+            text: "Movimientos", onclick: {fn: clickSubmenu}, id: "movimientos"
+        },
+        {
+            text: "Inversiones", onclick: {fn: clickSubmenu}, id: "inversiones"
         },
 	{
             text: "Usuarios", onclick: {fn: clickSubmenu}, id: "usuarios"
