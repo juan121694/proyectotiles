@@ -1,0 +1,72 @@
+package com.javarevolutions.spring.dominio;
+
+import java.sql.Date;
+
+public class MovimientosBean extends GenericoBean{
+    private static final long serialVersionUID = -1833702209651210286L;
+    private Integer id;
+    private String concepto;
+    private Date fecha;
+    private Integer cantidad;
+    private String fechaStr;
+    private String tipo;
+    private IndexBean usuario;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getConcepto() {
+        return concepto;
+    }
+
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getFechaStr() {
+        return fechaStr;
+    }
+
+    public void setFechaStr(String fechaStr) {
+        this.fechaStr = fechaStr;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public IndexBean getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(IndexBean usuario) {
+        this.usuario = usuario;
+    }
+    
+    
+}
