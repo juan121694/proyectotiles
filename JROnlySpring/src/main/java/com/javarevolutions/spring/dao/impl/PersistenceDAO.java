@@ -1,20 +1,4 @@
-/**
- * Todos los Derechos Reservados © 2014 Java Revolutions.
- * Sistema Web construido solo con Spring.
- * Este software contiene información propiedad exclusiva de Java Revolutions considerada
- * Confidencial. Queda totalmente prohibido su uso o divulgación en forma
- * parcial o total.
- *	---------------------------------------------------------------------------
- * Nombre de Aplicacion: Proyecto Web Java Revolutions Solo Spring
- * Nombre de archivo: PersistenceDAO.java
- * Fecha de creacion : Noviembre, 2013
- * @author : Sergio Alberto Cortés Rios
- * @version 1.0
- *
- * Bitácora de modificaciones:
- * CR/Defecto 		Fecha 			Autor 			Descripción del cambio
- *---------------------------------------------------------------------------
- */
+
 package com.javarevolutions.spring.dao.impl;
 
 import java.util.List;
@@ -26,14 +10,14 @@ public abstract class PersistenceDAO extends JdbcDaoSupport {
     private String esquema;
 
     /**
-     * Este método obtiene el esquema de la base de datos
+     * Este mï¿½todo obtiene el esquema de la base de datos
      * @return esquema
      */
     public String getEsquema() {
         return esquema;
     }
     /**
-     * Este método establece el esquema de la base de datos
+     * Este mï¿½todo establece el esquema de la base de datos
      * @param esquema
      */
     public void setEsquema(String esquema) {

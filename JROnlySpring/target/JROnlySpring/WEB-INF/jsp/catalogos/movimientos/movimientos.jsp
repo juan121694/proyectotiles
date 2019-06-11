@@ -3,19 +3,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="<%=request.getContextPath()%>/css/paginator.css" rel="stylesheet" type="text/css"/>
 <title>Cátalogo de Clientes</title>
 <script type="text/javascript" src="<%= request.getContextPath() %>/js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="<%= request.getContextPath() %>/js/jr.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath() %>/js/paginator.js"></script>
 <script type="text/javascript" src="<%= request.getContextPath() %>/js/catalogos/movimientos.js"></script>
 </head>
 <body onload="loadForma('tablaCatalogoMovimientos');">
 <form:form commandName="movimientosBean">
 <form:hidden path="id"/>
-<div align="center" style="width: 100%; height: 450px;">
-<table style="width: 98%">
-<tr>
-    <td style="font-weight: bold; size: 20px;" align="right" colspan="4">-> Cátalogo de Movimientos</td>
-</tr>
+<div align="center" style="width: 100%; height: 700px;">
+<table style="width: 100%">
 <tr>
 <td>
     <table style="width: 100%;">
@@ -36,7 +35,7 @@
         </td></tr>
         <tr><td width="100%" height="2px" bgcolor="Silver"></td></tr>
     </table>
-    <table id="tablaCatalogoMovimientos" style="width: 100%">
+    <table id="tablaCatalogoMovimientos" style="width: 100%" class="display">
         <tr>
         <th style="display: none;">id</th>
         <th>Concepto</th>

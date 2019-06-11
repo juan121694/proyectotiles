@@ -27,27 +27,20 @@
     <link href="<%=request.getContextPath()%>/css/jr.css" rel="stylesheet" type="text/css"/>
     </head>
     <body class="yui-skin-sam">
-        <table border="0" cellpadding="2" cellspacing="2" align="center">
+        <tiles:insertAttribute name="header"/>
+        <table border="0" cellpadding="2" cellspacing="2" align="center" >
             <tr>
-                <td>
-                    <tiles:insertAttribute name="header"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
+                <td >
                     <tiles:insertAttribute name="menu"/>
                 </td>
             </tr>
             <tr>
-                <td width="100%" height="450px">
+                <td width="100%" height="700px">
                     <tiles:insertAttribute name="body"/>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <tiles:insertAttribute name="footer"/>
-                </td>
-            </tr>
         </table>
+        
+        <tiles:insertAttribute name="footer"/>
     </body>
 </html>

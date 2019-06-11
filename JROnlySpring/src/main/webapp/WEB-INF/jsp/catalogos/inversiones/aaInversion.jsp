@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Agregar ó Actualizar Cliente</title>
+<title>Agregar Ã³ Actualizar Cliente</title>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/formas.css"/>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/calendario_dw-estilos.css"/>
 <script type="text/javascript" src="<%= request.getContextPath() %>/js/jquery-1.10.2.js"></script>
@@ -38,12 +38,8 @@
 <td><form:input path="valor" class="required"/></td>
 </tr>
 <tr>
-<td style="text-align: right;"><label>Usuario : </label></td>
-<td><form:input path="usuario.usuario" class="required"/></td>
-</tr>
-<tr>
 <td><input type="button" value="Cancelar" onclick="cancelar();"/>
-<td><input type="submit" value="Aceptar"/></td>
+<td><input type="submit" value="Aceptar" /></td>
 </tr>
 </table>
 </center>

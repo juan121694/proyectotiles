@@ -1,6 +1,7 @@
 package com.javarevolutions.spring.web;
 
 
+import com.javarevolutions.spring.dominio.IndexBean;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -45,8 +46,8 @@ public class MovimientosController extends ControllerUtil {
                     Model model, HttpServletRequest request) {
         Map<String, String> tipo = new LinkedHashMap<String, String>();
         tipo.put(null, "Seleccionar . . .");
-        tipo.put("A", "Abono");
-        tipo.put("C", "Cargo");
+        tipo.put("Abono", "Abono");
+        tipo.put("Cargo", "Cargo");
         model.addAttribute("listaTipos", tipo);
         if(!movimientosBean.getAccion().equals("nuevo")) {
             try {
@@ -76,6 +77,10 @@ public class MovimientosController extends ControllerUtil {
     public String insertaMovimiento(@ModelAttribute("movimientosBean") MovimientosBean movimientosBean, HttpServletRequest request,
         HttpServletResponse response) {
         try {
+            IndexBean bean = new IndexBean();
+            bean.setUsuario("juan");
+            bean.setPassword("1");
+            movimientosBean.setUsuario(bean);
             movimientosBean.setFecha(Date.valueOf(formatFechaSQL(movimientosBean.getFechaStr())));
             service.insertaMovimiento(movimientosBean);
         } catch(Exception e) {

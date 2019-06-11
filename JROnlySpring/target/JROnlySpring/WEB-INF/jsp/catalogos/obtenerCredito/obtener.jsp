@@ -1,5 +1,5 @@
 <html>
     <body>
-        <h1>Obtener Credito</h1>
+        <img src="<%= request.getContextPath() %>/images/obtenerCredito.png" border="0" width="700" />
     </body>
 </html>

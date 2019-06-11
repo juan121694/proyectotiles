@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.javarevolutions.spring.dominio;
 
 import java.sql.Date;
-/**
- *
- * @author juan
- */
+
 public class InversionesBean extends GenericoBean{
     private static final long serialVersionUID = -1833702209651210286L;
     private Integer id;

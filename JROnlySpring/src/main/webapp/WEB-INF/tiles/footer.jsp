@@ -1,20 +1,19 @@
-<!--
- * Todos los Derechos Reservados © 2014 Java Revolutions.
- * Sistema Web construido solo con Spring.
- * Este software contiene información propiedad exclusiva de Java Revolutions considerada
- * Confidencial. Queda totalmente prohibido su uso o divulgación en forma
- * parcial o total.
- *	---------------------------------------------------------------------------
- * Nombre de Aplicacion: Proyecto Web Java Revolutions Solo Spring
- * Nombre de archivo: footer.jsp
- * Fecha de creacion : Noviembre, 2013
- * @author : Sergio Alberto Cortés Rios
- * @version 1.0
- *
- * Bitácora de modificaciones:
- * CR/Defecto 		Fecha 			Autor 			Descripción del cambio
- *---------------------------------------------------------------------------
--->
 <center>
-    <h1>Footer</h1>
+    <link href="<%=request.getContextPath()%>/css/footer.css" rel="stylesheet" type="text/css"/>
+    <footer class="d-flex flex-column" >
+        <div id="page-content">
+          <div class="container text-center">
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                  <h3>Tecnologias 2019</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+          <div class="container text-center">
+            <small>Copyright &copy; Proyecto FInal</small>
+          </div>
+        </footer>
+      </footer>
 </center>

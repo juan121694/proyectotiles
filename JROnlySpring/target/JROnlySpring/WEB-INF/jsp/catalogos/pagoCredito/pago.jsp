@@ -1,5 +1,5 @@
 <html>
     <body>
-        <h1>Pago</h1>
+        <img src="<%= request.getContextPath() %>/images/pago.png" border="0" width="700"/>
     </body>
 </html>

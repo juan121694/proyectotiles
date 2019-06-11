@@ -11,11 +11,8 @@
 <body onload="loadForma('tablaCatalogoInversiones');">
 <form:form commandName="inversionesBean">
 <form:hidden path="id"/>
-<div align="center" style="width: 100%; height: 450px;">
+<div align="center" style="width: 100%; height: 700px;">
 <table style="width: 98%">
-<tr>
-    <td style="font-weight: bold; size: 20px;" align="right" colspan="4">-> Cátalogo de Inversion</td>
-</tr>
 <tr>
 <td>
     <table style="width: 100%;">

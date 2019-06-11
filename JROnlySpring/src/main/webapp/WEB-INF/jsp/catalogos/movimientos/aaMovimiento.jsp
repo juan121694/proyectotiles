@@ -38,10 +38,6 @@
 <td><form:input path="cantidad" class="required"/></td>
 </tr>
 <tr>
-<td style="text-align: right;"><label>Usuario : </label></td>
-<td><form:input path="usuario.usuario" class="required"/></td>
-</tr>
-<tr>
 <td><input type="button" value="Cancelar" onclick="cancelar();"/>
 <td><input type="submit" value="Aceptar"/></td>
 </tr>

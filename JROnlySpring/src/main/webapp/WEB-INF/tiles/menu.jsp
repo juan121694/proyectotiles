@@ -1,4 +1,3 @@
-
 <%
 String context = request.getContextPath();
 %>
@@ -44,17 +43,11 @@ YAHOO.util.Event.onDOMReady(function () {
         {
 	   	text: "Inicio", onclick: {fn: clickSubmenu}, id: "home"
 	},
-	{
-            text: "Clientes", onclick: {fn: clickSubmenu}, id: "clientes"
-        },
         {
             text: "Movimientos", onclick: {fn: clickSubmenu}, id: "movimientos"
         },
         {
             text: "Inversiones", onclick: {fn: clickSubmenu}, id: "inversiones"
-        },
-	{
-            text: "Usuarios", onclick: {fn: clickSubmenu}, id: "usuarios"
         },
         {
 	    text: "Pago Credito", onclick: {fn: clickSubmenu}, id: "pago"

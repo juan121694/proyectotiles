@@ -1,5 +1,6 @@
 package com.javarevolutions.spring.web;
 
+import com.javarevolutions.spring.dominio.IndexBean;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -44,8 +45,8 @@ public class InversionesController extends ControllerUtil {
                     Model model, HttpServletRequest request) {
         Map<String, String> tipo = new LinkedHashMap<String, String>();
         tipo.put(null, "Seleccionar . . .");
-        tipo.put("A", "Arriesgada");
-        tipo.put("S", "Seguro");
+        tipo.put("Arriesgada", "Arriesgada");
+        tipo.put("Seguro", "Seguro");
         model.addAttribute("listaTipos", tipo);
         if(!inversionesBean.getAccion().equals("nuevo")) {
             try {
@@ -75,6 +76,10 @@ public class InversionesController extends ControllerUtil {
     public String insertaInversion(@ModelAttribute("inversionesBean") InversionesBean inversionesBean, HttpServletRequest request,
         HttpServletResponse response) {
         try {
+            IndexBean bean = new IndexBean();
+            bean.setUsuario("juan");
+            bean.setPassword("1");
+            inversionesBean.setUsuario(bean);
             inversionesBean.setFecha(Date.valueOf(formatFechaSQL(inversionesBean.getFechaStr())));
             service.insertaInversion(inversionesBean);
         } catch(Exception e) {
